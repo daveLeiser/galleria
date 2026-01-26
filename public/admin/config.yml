@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment for local development
+# local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "stories"
+    label: "Erfolgsstories"
+    label_singular: "Erfolgsgeschichte"
+    folder: "content/stories"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID", name: "id", widget: "string", hint: "Eindeutige ID (z.B. 'mein-projekt')" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Untertitel", name: "subtitle", widget: "string" }
+      - { label: "Beschreibung", name: "description", widget: "text", hint: "Hauptbeschreibung des Projekts" }
+      - { label: "Testimonial", name: "testimonial", widget: "text", required: false, hint: "Kundenzitat (optional)" }
+      - { label: "Kundenname", name: "clientName", widget: "string", required: false, hint: "Name des Kunden (optional)" }
+      - { label: "Bild", name: "image", widget: "image", required: false, hint: "Hauptbild für diese Erfolgsgeschichte" }
+
+  - name: "exhibitions"
+    label: "Ausstellungen"
+    label_singular: "Ausstellung"
+    folder: "content/exhibitions"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "ID", name: "id", widget: "string", hint: "Eindeutige ID (z.B. 'ausstellung-2025')" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum von", name: "dateFrom", widget: "string", hint: "z.B. '15. Januar 2025'" }
+      - { label: "Datum bis", name: "dateTo", widget: "string", hint: "z.B. '28. Februar 2025'" }
+      - { label: "Kurzbeschreibung", name: "description", widget: "text", hint: "Kurze Beschreibung der Ausstellung" }
+      - { label: "Lange Beschreibung", name: "longDescription", widget: "text", required: false, hint: "Detaillierte Beschreibung (optional)" }
+      - { label: "Hervorgehoben", name: "featured", widget: "boolean", default: false, hint: "Als Hauptausstellung hervorheben" }
+      - { label: "Vergangen", name: "past", widget: "boolean", default: false, hint: "Ist die Ausstellung bereits vorbei?" }
+      - { label: "Bild", name: "image", widget: "image", required: false, hint: "Hauptbild für diese Ausstellung" }
