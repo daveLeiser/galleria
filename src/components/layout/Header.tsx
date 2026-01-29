@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { AnimatedHamburger } from "../ui/AnimatedHamburger";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -88,13 +88,11 @@ export function Header() {
                     </nav>
 
                     {/* Mobile Menu Button */}
-                    <button
-                        className="lg:hidden p-2 text-charcoal hover:text-gold transition-colors"
+                    <AnimatedHamburger
+                        isOpen={isMobileMenuOpen}
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
+                        className="lg:hidden hover:opacity-80 transition-opacity"
+                    />
                 </div>
             </header>
 
