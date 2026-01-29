@@ -1,0 +1,14 @@
+{
+    "id": "galleria-street-art",
+    "title": "Galleria Street Art Collection",
+    "dateFrom": "17.01.2026",
+    "dateTo": "07.02.2026",
+    "description": "Die Galleria Street Art Collection - urbane Kunst trifft Galerie.",
+    "longDescription": "Eine einzigartige Sammlung von Street Art, die die Grenzen zwischen urbaner Kunst und traditioneller Galerie verwischt. Entdecken Sie die kraftvollen Werke zeitgenössischer Street Art Künstler.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/galleriaStreetArt/cover.jpeg",
+    "gallery": [
+        "/images/exhibitions/galleriaStreetArt/Einladung.png"
+    ]
+}

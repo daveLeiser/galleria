@@ -14,12 +14,6 @@ const services = [
             "Individuelle Rahmen aus erlesenen Materialien, perfekt abgestimmt auf Ihr Kunstwerk und Ihren Raum.",
     },
     {
-        icon: Palette,
-        title: "Grafiken & Kunstwerke",
-        description:
-            "Ausgewählte Grafiken internationaler Kunstverläge und Werke bekannter Künstler.",
-    },
-    {
         icon: Paintbrush,
         title: "Einrahmen & Restauration",
         description:
@@ -73,7 +67,7 @@ export function ServicesPreview() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto"
                 >
                     {services.map((service, index) => (
                         <motion.div

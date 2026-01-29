@@ -1,0 +1,20 @@
+{
+    "id": "bia-collages",
+    "title": "Ausstellung Bia Collages",
+    "dateFrom": "08.03.2025",
+    "dateTo": "05.04.2025",
+    "description": "Entdecken Sie die kreativen Collagen von Bia.",
+    "longDescription": "Bia präsentiert ihre einzigartigen Collagen, die durch ihre kreative Komposition und lebendige Farbgebung faszinieren. Tauchen Sie ein in eine Welt voller künstlerischer Vielfalt.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/biaCollages/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-02-26 um 23.14.50_fccf3e89.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_2a4ac9c0.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_422c204a.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_a4baaf4e.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_b41455ae.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_be47150d.jpg",
+        "/images/exhibitions/biaCollages/WhatsApp Bild 2025-03-19 um 23.35.07_cd8b0571.jpg"
+    ]
+}

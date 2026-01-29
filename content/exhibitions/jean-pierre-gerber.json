@@ -1,0 +1,18 @@
+{
+    "id": "jean-pierre-gerber",
+    "title": "Ausstellung Jean-Pierre Gerber",
+    "dateFrom": "03.03.2024",
+    "dateTo": "28.03.2024",
+    "description": "Eine beeindruckende Sammlung von Werken des Künstlers Jean-Pierre Gerber.",
+    "longDescription": "Entdecken Sie die faszinierende Welt von Jean-Pierre Gerber. Seine Werke zeichnen sich durch eine einzigartige Perspektive und meisterhafte Technik aus, die den Betrachter in ihren Bann ziehen.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/Jeanpierre/Cover.jpg",
+    "gallery": [
+        "/images/exhibitions/Jeanpierre/JP1.jpg",
+        "/images/exhibitions/Jeanpierre/JP2.jpg",
+        "/images/exhibitions/Jeanpierre/jp3.jpg",
+        "/images/exhibitions/Jeanpierre/jp4.jpg",
+        "/images/exhibitions/Jeanpierre/jp5.jpg"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "id": "rosmarie-wysseier",
+    "title": "Ausstellung Rosmarie Wysseier",
+    "dateFrom": "12.11.2024",
+    "dateTo": "24.12.2024",
+    "description": "Eine inspirierende Ausstellung mit Werken von Rosmarie Wysseier.",
+    "longDescription": "Rosmarie Wysseier zeigt ihre eindrucksvollen Arbeiten, die durch ihre feinfühlige Gestaltung und künstlerische Tiefe bestechen. Lassen Sie sich von ihrer Kunst inspirieren.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/wysseier/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/wysseier/WhatsApp Bild 2024-11-16 um 11.10.58_224cdb3e.jpg",
+        "/images/exhibitions/wysseier/WhatsApp Bild 2024-11-16 um 11.10.58_2251be45.jpg",
+        "/images/exhibitions/wysseier/WhatsApp Bild 2024-11-16 um 11.10.58_49e738a0.jpg",
+        "/images/exhibitions/wysseier/WhatsApp Bild 2024-11-16 um 11.10.58_cffeecfe.jpg",
+        "/images/exhibitions/wysseier/WhatsApp Bild 2024-11-16 um 11.21.47_71d2da42.jpg"
+    ]
+}

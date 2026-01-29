@@ -8,6 +8,7 @@ export interface Exhibition {
     featured?: boolean;
     past?: boolean;
     image?: string;
+    gallery?: string[];
 }
 
 export function getExhibitions(): Exhibition[] {
@@ -26,6 +27,21 @@ export function getExhibitions(): Exhibition[] {
                 const fileContents = fs.readFileSync(filePath, 'utf8');
                 return JSON.parse(fileContents) as Exhibition;
             });
+
+        // Sort exhibitions by end date (newest first)
+        exhibitions.sort((a: Exhibition, b: Exhibition) => {
+            // Parse dates in DD.MM.YYYY format
+            const parseDate = (dateStr: string) => {
+                const [day, month, year] = dateStr.split('.').map(Number);
+                return new Date(year, month - 1, day);
+            };
+
+            const dateA = parseDate(a.dateTo);
+            const dateB = parseDate(b.dateTo);
+
+            // Sort descending (newest first)
+            return dateB.getTime() - dateA.getTime();
+        });
 
         return exhibitions;
     }

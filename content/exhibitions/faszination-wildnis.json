@@ -1,0 +1,21 @@
+{
+    "id": "faszination-wildnis",
+    "title": "Ausstellung Faszination Wildnis",
+    "dateFrom": "21.11.2025",
+    "dateTo": "10.01.2026",
+    "description": "Faszination Wildnis - die Schönheit der unberührten Natur.",
+    "longDescription": "Erleben Sie die faszinierende Wildnis in all ihrer Pracht. Diese Ausstellung zeigt die unberührte Schönheit der Natur und lädt Sie ein, die Wunder der wilden Landschaften zu entdecken.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/faszinationWildnis/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-11-10 um 20.42.39_8f9d0e9e.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_0d2c519b.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_5e8922e2.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_66432dba.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_7f0dcc21.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_8fd7a40c.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_ad5798f1.jpg",
+        "/images/exhibitions/faszinationWildnis/WhatsApp Bild 2025-12-04 um 19.07.01_c809998a.jpg"
+    ]
+}

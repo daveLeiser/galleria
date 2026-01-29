@@ -1,0 +1,26 @@
+{
+    "id": "thomas-weder",
+    "title": "Ausstellung Wilde Tierwelten - Thomas Weder",
+    "dateFrom": "26.04.2025",
+    "dateTo": "24.05.2025",
+    "description": "Wilde Tierwelten eingefangen von Thomas Weder.",
+    "longDescription": "Thomas Weder nimmt Sie mit auf eine faszinierende Reise durch die wilde Tierwelt. Seine beeindruckenden Fotografien und Kunstwerke zeigen die Schönheit und Kraft der Natur in ihrer reinsten Form.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/weder/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/weder/1.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-19 um 09.53.08_2d6d0217.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.06_2d727050.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.06_903e5885.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.06_abce3f0e.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.06_feb1a459.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_28840672.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_2ab912ef.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_423c2d73.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_78fea3fd.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_939cea5f.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_adc7b631.jpg",
+        "/images/exhibitions/weder/WhatsApp Bild 2025-04-29 um 17.42.07_b861f493.jpg"
+    ]
+}

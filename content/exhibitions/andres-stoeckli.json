@@ -1,0 +1,12 @@
+{
+    "id": "andres-stoeckli",
+    "title": "Ausstellung Andres Stöckli",
+    "dateFrom": "01.02.2025",
+    "dateTo": "01.03.2025",
+    "description": "Eine bemerkenswerte Ausstellung mit Werken von Andres Stöckli.",
+    "longDescription": "Andres Stöckli präsentiert seine neuesten Kreationen, die durch ihre innovative Herangehensweise und künstlerische Vision beeindrucken. Eine Ausstellung voller Inspiration.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/stöckli/cover.jpg",
+    "gallery": []
+}

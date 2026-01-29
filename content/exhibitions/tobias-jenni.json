@@ -1,0 +1,21 @@
+{
+    "id": "tobias-jenni",
+    "title": "Ausstellung Tobias Jenni",
+    "dateFrom": "01.06.2024",
+    "dateTo": "30.06.2024",
+    "description": "Eine faszinierende Ausstellung mit Werken von Tobias Jenni.",
+    "longDescription": "Tobias Jenni zeigt seine neuesten Arbeiten, die durch ihre einzigartige Perspektive und künstlerische Ausdruckskraft beeindrucken. Tauchen Sie ein in seine kreative Welt.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/Jenni/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_62449513.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_8ccaa030.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_8e0f547d.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_b9a72541.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_bd3ec854.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.36_d05f4f46.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.37_5429cc5f.jpg",
+        "/images/exhibitions/Jenni/WhatsApp Bild 2024-06-06 um 11.28.37_a0323f22.jpg"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "id": "arty-show",
+    "title": "Arty Show Biel/Bienne",
+    "dateFrom": "28.08.2025",
+    "dateTo": "28.08.2025",
+    "description": "Die Arty Show Biel/Bienne - ein besonderes Kunstevent.",
+    "longDescription": "Ein unvergessliches Kunstevent in Biel/Bienne. Die Arty Show brachte Künstler und Kunstliebhaber zusammen und bot eine Plattform für kreative Begegnungen und inspirierende Kunstwerke.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/artyshow/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/artyshow/WhatsApp Bild 2025-08-23 um 09.18.20_08ed8162.jpg",
+        "/images/exhibitions/artyshow/WhatsApp Bild 2025-08-23 um 09.18.22_3b5489e3.jpg"
+    ]
+}

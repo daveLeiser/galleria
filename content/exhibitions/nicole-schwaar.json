@@ -1,0 +1,28 @@
+{
+    "id": "nicole-schwaar",
+    "title": "Ausstellung Nicole Schwaar",
+    "dateFrom": "04.05.2024",
+    "dateTo": "25.05.2024",
+    "description": "Eine inspirierende Ausstellung mit Werken von Nicole Schwaar.",
+    "longDescription": "Nicole Schwaar präsentiert ihre neuesten Arbeiten, die durch ihre lebendigen Farben und emotionale Tiefe bestechen. Lassen Sie sich von ihrer künstlerischen Vision verzaubern.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/schwaar/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-04-23 um 15.47.30_a5906071.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.15_27d45a62.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.15_5b39e19c.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.15_61744ccd.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.15_9cba92b6.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.15_bba89d6e.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.16_0abbf3b9.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.16_47063f31.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.16_866a8b3f.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.16_c2b6b431.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.11.16_f3299d6b.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.14.04_13f16de4.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.14.04_2207de6d.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.14.04_3dee9f1a.jpg",
+        "/images/exhibitions/schwaar/WhatsApp Bild 2024-05-04 um 21.14.04_c1698000.jpg"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "id": "marco-benedetti",
+    "title": "Ausstellung Marco Benedetti",
+    "dateFrom": "21.09.2024",
+    "dateTo": "19.10.2024",
+    "description": "Entdecken Sie die beeindruckenden Werke von Marco Benedetti.",
+    "longDescription": "Marco Benedetti präsentiert seine Kunstwerke, die durch ihre kraftvolle Ausdrucksstärke und technische Perfektion überzeugen. Eine Ausstellung, die Sie nicht verpassen sollten.",
+    "featured": false,
+    "past": true,
+    "image": "/images/exhibitions/benedetti/cover.jpg",
+    "gallery": [
+        "/images/exhibitions/benedetti/WhatsApp Bild 2024-08-23 um 15.48.31_bdc3e0f4.jpg"
+    ]
+}
