@@ -16,7 +16,7 @@ export function AnimatedHamburger({
     onClick,
     className = "",
     strokeColor = "#2C2C2C", // charcoal
-    strokeWidth = 3,
+    strokeWidth = 1,
     size = 48
 }: AnimatedHamburgerProps) {
     return (
