@@ -23,10 +23,10 @@ export const businessInfo = {
         emailHref: "mailto:galleria.flury@bluewin.ch",
     },
     address: {
-        street: "St. Niklausstrasse 22",
-        postalCode: "3274",
-        city: "Merzligen",
-        fullAddress: "St. Niklausstrasse 22, 3274 Merzligen",
+        street: "Bendicht-Rechberger-Strasse 3",
+        postalCode: "2502",
+        city: "Biel",
+        fullAddress: "Bendicht-Rechberger-Strasse 3, 2502 Biel",
     },
     openingHours: [
         { day: "Montag", hours: "Geschlossen", closed: true },
