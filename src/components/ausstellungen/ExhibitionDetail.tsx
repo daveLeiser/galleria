@@ -2,24 +2,48 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Exhibition } from "@/data/exhibitions";
-import { Calendar, ArrowLeft, X } from "lucide-react";
+import { Calendar, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export function ExhibitionDetail({ exhibition }: { exhibition: Exhibition }) {
     const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [lightboxImage, setLightboxImage] = useState("");
+    const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-    const openLightbox = (imageSrc: string) => {
-        setLightboxImage(imageSrc);
+    // Build the full list of lightbox-navigable images (gallery only)
+    const galleryImages = exhibition.gallery ?? [];
+
+    const openLightbox = (index: number) => {
+        setLightboxIndex(index);
         setLightboxOpen(true);
     };
 
     const closeLightbox = () => {
         setLightboxOpen(false);
-        setTimeout(() => setLightboxImage(""), 300);
+        setTimeout(() => setLightboxIndex(null), 300);
     };
+
+    const showPrev = useCallback(() => {
+        setLightboxIndex((i) => (i === null ? 0 : (i - 1 + galleryImages.length) % galleryImages.length));
+    }, [galleryImages.length]);
+
+    const showNext = useCallback(() => {
+        setLightboxIndex((i) => (i === null ? 0 : (i + 1) % galleryImages.length));
+    }, [galleryImages.length]);
+
+    useEffect(() => {
+        if (!lightboxOpen) return;
+        const handleKey = (e: KeyboardEvent) => {
+            if (e.key === "ArrowLeft") showPrev();
+            else if (e.key === "ArrowRight") showNext();
+            else if (e.key === "Escape") closeLightbox();
+        };
+        window.addEventListener("keydown", handleKey);
+        return () => window.removeEventListener("keydown", handleKey);
+    }, [lightboxOpen, showPrev, showNext]);
+
+    const currentImage = lightboxIndex !== null ? galleryImages[lightboxIndex] : null;
 
     const imageUrl = exhibition.image || "/images/exhibition.png";
 
@@ -87,8 +111,7 @@ export function ExhibitionDetail({ exhibition }: { exhibition: Exhibition }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative aspect-[16/9] max-w-5xl mx-auto overflow-hidden cursor-pointer group"
-                        onClick={() => openLightbox(imageUrl)}
+                        className="relative aspect-[16/9] max-w-5xl mx-auto overflow-hidden group"
                     >
                         <Image
                             src={imageUrl}
@@ -157,7 +180,7 @@ export function ExhibitionDetail({ exhibition }: { exhibition: Exhibition }) {
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1, duration: 0.6 }}
                                     className="relative aspect-square overflow-hidden cursor-pointer group"
-                                    onClick={() => openLightbox(image)}
+                                    onClick={() => openLightbox(index)}
                                 >
                                     <Image
                                         src={image}
@@ -175,7 +198,7 @@ export function ExhibitionDetail({ exhibition }: { exhibition: Exhibition }) {
 
             {/* Lightbox */}
             <AnimatePresence>
-                {lightboxOpen && (
+                {lightboxOpen && currentImage && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -183,26 +206,62 @@ export function ExhibitionDetail({ exhibition }: { exhibition: Exhibition }) {
                         className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
                         onClick={closeLightbox}
                     >
+                        {/* Close */}
                         <button
-                            className="absolute top-4 right-4 text-white hover:text-gold transition-colors"
+                            className="absolute top-4 right-4 text-white hover:text-gold transition-colors z-10"
                             onClick={closeLightbox}
                         >
                             <X size={32} />
                         </button>
-                        <motion.div
-                            initial={{ scale: 0.8 }}
-                            animate={{ scale: 1 }}
-                            exit={{ scale: 0.8 }}
-                            className="relative max-w-7xl max-h-[90vh] w-full h-full"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <Image
-                                src={lightboxImage}
-                                alt="Lightbox image"
-                                fill
-                                className="object-contain"
-                            />
-                        </motion.div>
+
+                        {/* Prev */}
+                        {galleryImages.length > 1 && (
+                            <button
+                                className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gold transition-colors z-10 bg-black/40 rounded-full p-2"
+                                onClick={(e) => { e.stopPropagation(); showPrev(); }}
+                                aria-label="Vorheriges Bild"
+                            >
+                                <ChevronLeft size={40} />
+                            </button>
+                        )}
+
+                        {/* Next */}
+                        {galleryImages.length > 1 && (
+                            <button
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gold transition-colors z-10 bg-black/40 rounded-full p-2"
+                                onClick={(e) => { e.stopPropagation(); showNext(); }}
+                                aria-label="Nächstes Bild"
+                            >
+                                <ChevronRight size={40} />
+                            </button>
+                        )}
+
+                        {/* Image */}
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={lightboxIndex}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 0.25 }}
+                                className="relative max-w-7xl max-h-[90vh] w-full h-full"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <Image
+                                    src={currentImage}
+                                    alt={`Bild ${(lightboxIndex ?? 0) + 1} von ${galleryImages.length}`}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+
+                        {/* Counter */}
+                        {galleryImages.length > 1 && (
+                            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm" style={{ fontFamily: "var(--font-josefin)" }}>
+                                {(lightboxIndex ?? 0) + 1} / {galleryImages.length}
+                            </div>
+                        )}
                     </motion.div>
                 )}
             </AnimatePresence>

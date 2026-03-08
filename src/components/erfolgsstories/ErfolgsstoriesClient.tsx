@@ -12,6 +12,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
     const isEven = index % 2 === 0;
     const images = story.images || ["/images/success-story.png"]; // Fallback to default
     const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    const touchStartX = React.useRef<number | null>(null);
 
     const nextImage = () => {
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -19,6 +20,19 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
 
     const prevImage = () => {
         setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null) return;
+        const delta = touchStartX.current - e.changedTouches[0].clientX;
+        if (Math.abs(delta) > 50) {
+            delta > 0 ? nextImage() : prevImage();
+        }
+        touchStartX.current = null;
     };
 
     return (
@@ -36,7 +50,11 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
                 transition={{ duration: 0.4 }}
                 className={`relative ${isEven ? "" : "lg:order-2"}`}
             >
-                <div className="relative h-64 lg:h-80 overflow-hidden group">
+                <div
+                    className="relative h-64 lg:h-80 overflow-hidden group"
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
                     <Image
                         src={images[currentImageIndex]}
                         alt={`${story.title} - Bild ${currentImageIndex + 1}`}
@@ -51,7 +69,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
                         <>
                             <button
                                 onClick={prevImage}
-                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-charcoal/80 hover:bg-charcoal text-cream p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 bg-charcoal/80 hover:bg-charcoal text-cream p-2 rounded-full transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100"
                                 aria-label="Vorheriges Bild"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -60,7 +78,7 @@ function StoryCard({ story, index }: { story: Story; index: number }) {
                             </button>
                             <button
                                 onClick={nextImage}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-charcoal/80 hover:bg-charcoal text-cream p-2 rounded-full transition-all opacity-0 group-hover:opacity-100"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 bg-charcoal/80 hover:bg-charcoal text-cream p-2 rounded-full transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100"
                                 aria-label="Nächstes Bild"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
