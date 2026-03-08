@@ -26,10 +26,10 @@ export function Header() {
     }, []);
 
     return (
-        <>
+        <div className={`sticky top-0 z-50`}>
             {/* Main Header */}
             <header
-                className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled
+                className={`transition-all duration-500 ${isScrolled
                     ? "bg-cream/95 backdrop-blur-md shadow-md py-3"
                     : "bg-transparent py-6"
                     }`}
@@ -103,7 +103,7 @@ export function Header() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden fixed top-[120px] left-0 right-0 bg-cream z-40 border-b border-light overflow-hidden"
+                        className="lg:hidden bg-cream border-b border-light overflow-hidden"
                     >
                         <nav className="container py-6 flex flex-col gap-4">
                             {navLinks.map((link, index) => (
@@ -140,6 +140,6 @@ export function Header() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </>
+        </div>
     );
 }

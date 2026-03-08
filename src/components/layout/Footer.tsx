@@ -20,9 +20,9 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-charcoal text-cream">
+        <footer className="bg-charcoal text-cream pt-12">
             {/* Main Footer */}
-            <div className="container pt-24 pb-16">
+            <div className="container pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
                     {/* Brand Column */}
                     <div>
