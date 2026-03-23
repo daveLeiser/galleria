@@ -2,17 +2,18 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-
-const ADDRESS = "Bendicht-Rechberger-Strasse 3, 2502 Biel, Switzerland";
-const GOOGLE_MAPS_URL =
-    "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent(ADDRESS);
-const MAPS_EMBED_URL =
-    "https://maps.google.com/maps?q=" +
-    encodeURIComponent(ADDRESS) +
-    "&t=&z=16&ie=UTF8&iwloc=&output=embed";
+import { businessInfo } from "@/config/businessInfo";
 
 export function StoreLocationMap() {
+    const address = `${businessInfo.address.fullAddress}, Switzerland`;
+    const GOOGLE_MAPS_URL =
+        "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent(address);
+    const MAPS_EMBED_URL =
+        "https://maps.google.com/maps?q=" +
+        encodeURIComponent(address) +
+        "&t=&z=16&ie=UTF8&iwloc=&output=embed";
+
     return (
         <section className="section bg-paper relative overflow-hidden">
             {/* Decorative background */}
@@ -91,7 +92,7 @@ export function StoreLocationMap() {
                             className="text-warm-gray"
                             style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.9rem" }}
                         >
-                            Bendicht-Rechberger-Strasse 3, 2502 Biel
+                            {businessInfo.address.fullAddress}
                         </p>
                     </motion.div>
                 </motion.div>

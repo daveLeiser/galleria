@@ -3,6 +3,7 @@ import { Playfair_Display, Cormorant_Garamond, Josefin_Sans } from "next/font/go
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AnnouncementBanner } from "@/components/ui/AnnouncementBanner";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${cormorant.variable} ${josefin.variable}`}
       >
+        <AnnouncementBanner />
         <Header />
         <main>{children}</main>
         <Footer />
