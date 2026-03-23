@@ -121,8 +121,8 @@ export default function UeberUns() {
                         >
                             <div className="relative h-80 lg:h-[450px] overflow-hidden">
                                 <Image
-                                    src="/images/workshop.png"
-                                    alt="Unser Atelier"
+                                    src="/images/frames-collage.jpg"
+                                    alt="Rahmenvielfalt – Tradition trifft Moderne"
                                     fill
                                     className="object-cover"
                                 />
