@@ -16,9 +16,9 @@ export const businessInfo = {
         last: "Flury",
     },
     contact: {
-        phone: "+41 32 323 12 23",
-        phoneDisplay: "+41 32 323 12 23",
-        phoneHref: "tel:+41323231223",
+        phone: "+41 32 381 10 50",
+        phoneDisplay: "+41 32 381 10 50",
+        phoneHref: "tel:+41323811050",
         email: "galleria.flury@bluewin.ch",
         emailHref: "mailto:galleria.flury@bluewin.ch",
     },
