@@ -30,11 +30,11 @@ export const businessInfo = {
     },
     openingHours: [
         { day: "Montag", hours: "Geschlossen", closed: true },
-        { day: "Dienstag", hours: "Geschlossen", closed: true },
+        { day: "Dienstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
         { day: "Mittwoch", hours: "Geschlossen", closed: true },
-        { day: "Donnerstag", hours: "Geschlossen", closed: true },
-        { day: "Freitag", hours: "Geschlossen", closed: true },
-        { day: "Samstag", hours: "Geschlossen", closed: true },
+        { day: "Donnerstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
+        { day: "Freitag", hours: "14:00 - 18:00", closed: false },
+        { day: "Samstag", hours: "09:30 - 13:00", closed: false },
         { day: "Sonntag", hours: "Geschlossen", closed: true },
     ] as OpeningHoursDay[],
     social: {
@@ -43,7 +43,7 @@ export const businessInfo = {
     },
     announcement: {
         active: true,
-        message: "Unser Geschäft bleibt vorübergehend wegen Umzug geschlossen. Wiedereröffnung am 21. April 2026 an der St. Niklausstrasse 22, 3274 Merzligen",
+        message: "Wir begrüssen Sie gerne wieder an unserem neuen Standort an der St. Niklausstrasse 22, 3274 Merzligen. Wir freuen uns auf Ihren Besuch",
     },
     description: "Ihr Berater für Kunst, Bilder und Rahmen. Ein familiengeführtes Unternehmen mit Tradition und Leidenschaft für Qualität.",
 };
