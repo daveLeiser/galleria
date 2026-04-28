@@ -197,8 +197,26 @@ export default function UeberUns() {
             </section>
 
             {/* Values Section */}
-            <section className="section bg-paper relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-cream to-transparent opacity-30" />
+            <section className="section relative overflow-hidden">
+                {/* Background photo – Atelier2.jpg */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: "url('/images/uploads/Atelier2.jpg')",
+                        backgroundPosition: "center 40%",
+                    }}
+                />
+
+                {/* Overlay for readability */}
+                <div className="absolute inset-0 bg-paper/82" />
+
+                {/* Subtle gradient overlays */}
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-cream-dark/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-paper/80 to-transparent" />
+
+                {/* Decorative corner elements */}
+                <div className="absolute top-12 left-12 w-32 h-32 border-l border-t border-gold/20 hidden lg:block" />
+                <div className="absolute bottom-12 right-12 w-32 h-32 border-r border-b border-gold/20 hidden lg:block" />
 
                 <div className="container relative z-10">
                     <SectionHeader
@@ -295,7 +313,7 @@ export default function UeberUns() {
                                 fontSize: "1.125rem",
                             }}
                         >
-                            — Familie Flury
+                            — Team Galleria
                         </p>
                     </motion.div>
                 </div>

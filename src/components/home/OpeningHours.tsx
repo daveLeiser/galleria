@@ -17,10 +17,25 @@ export function OpeningHours() {
 
     return (
         <section className="section bg-charcoal relative overflow-hidden">
-            {/* Decorative elements */}
+            {/* Background photo – atelier3.jpeg */}
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: "url('/images/uploads/atelier3.jpeg')",
+                    backgroundPosition: "center 35%",
+                }}
+            />
+
+            {/* Dark overlay to keep the charcoal feel while letting the photo bleed through */}
+            <div className="absolute inset-0 bg-charcoal/75" />
+
+            {/* Subtle gradient vignettes */}
+            <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-transparent to-charcoal/60" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-gold/8 to-transparent blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-burgundy/8 to-transparent blur-3xl" />
+
+            {/* Grain texture */}
             <div className="absolute inset-0 grain-overlay opacity-5" />
-            <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-gold/10 to-transparent blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-burgundy/10 to-transparent blur-3xl" />
 
             <div className="container relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -99,9 +114,9 @@ export function OpeningHours() {
                     >
                         {/* Decorative frame */}
                         <div className="absolute -inset-4 border border-gold/20" />
-                        <div className="absolute -inset-1 bg-charcoal-light" />
+                        <div className="absolute -inset-1 bg-charcoal/70 backdrop-blur-sm" />
 
-                        <div className="relative bg-gradient-to-br from-charcoal-light to-charcoal p-8">
+                        <div className="relative bg-gradient-to-br from-charcoal/80 to-charcoal/90 p-8 backdrop-blur-sm">
                             {/* Header */}
                             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-warm-gray/20">
                                 <Clock size={24} className="text-gold" />
