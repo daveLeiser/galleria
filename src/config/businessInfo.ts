@@ -30,7 +30,8 @@ export const businessInfo = {
     },
     openingHours: [
         { day: "Montag", hours: "Geschlossen", closed: true },
-        { day: "Dienstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
+        { day: "Dienstag", hours: "Geschlossen", closed: true },
+        //        { day: "Dienstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
         { day: "Mittwoch", hours: "Geschlossen", closed: true },
         { day: "Donnerstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
         { day: "Freitag", hours: "14:00 - 18:00", closed: false },
