@@ -67,7 +67,7 @@ export function OpeningHours() {
                                 fontSize: "1.125rem",
                             }}
                         >
-                            Wir freuen uns auf Ihren Besuch in unserem Atelier in Biel/Bienne.
+                            Wir freuen uns auf Ihren Besuch in unserem Atelier in Merzligen.
                             Gerne beraten wir Sie persönlich und helfen Ihnen, die perfekte
                             Rahmenlösung für Ihre Kunstwerke zu finden.
                         </p>
