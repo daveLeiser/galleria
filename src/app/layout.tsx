@@ -27,13 +27,17 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Galleria Flury | Kunst, Bilder & Rahmen in Biel/Bienne",
-  description: "Ihr Spezialist für Bilderrahmen nach Mass, Kunstrahmen und Einrahmen von Bildern. Besuchen Sie unser Atelier in Biel/Bienne für hochwertige Rahmenkunst und persönliche Beratung.",
-  keywords: ["Bilderrahmen", "Kunstrahmen", "Einrahmen", "Biel", "Bienne", "Atelier", "Kunst", "Galerie"],
+  title: "Galleria Flury | Kunst, Bilder & Rahmen in Merzligen (Region Biel/Seeland)",
+  description: "Ihr Spezialist für Bilderrahmen nach Mass, Kunstrahmen und Einrahmen von Bildern. Besuchen Sie unser Atelier in Merzligen (nahe Lyss, Aarberg, Biel/Bienne) für hochwertige Rahmenkunst und persönliche Beratung.",
+  keywords: [
+    "Bilderrahmen", "Kunstrahmen", "Einrahmen", "Passepartout", "Einrahmungen", "Bilder restaurieren", 
+    "Encadrement", "Cadres", "Encadrements sur mesure", "Restauration de tableaux",
+    "Merzligen", "Biel", "Bienne", "Seeland", "Lyss", "Aarberg", "Atelier", "Kunst", "Galerie"
+  ],
   authors: [{ name: "Galleria Flury" }],
   openGraph: {
     title: "Galleria Flury | Kunst, Bilder & Rahmen",
-    description: "Ihr Spezialist für Bilderrahmen nach Mass und Kunstrahmen in Biel/Bienne",
+    description: "Ihr Spezialist für Bilderrahmen nach Mass und Kunstrahmen in Merzligen (Region Biel/Seeland)",
     locale: "de_CH",
     type: "website",
   },
@@ -44,10 +48,50 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Galleria Flury",
+    "image": "",
+    "url": "https://galleriaflury.ch",
+    "telephone": "+41 32 381 10 50",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "St. Niklausstrasse 22",
+      "addressLocality": "Merzligen",
+      "postalCode": "3274",
+      "addressCountry": "CH"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Thursday"],
+        "opens": "09:30",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "14:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:30",
+        "closes": "13:00"
+      }
+    ]
+  };
+
   return (
     <html lang="de">
       <head>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${playfair.variable} ${cormorant.variable} ${josefin.variable}`}

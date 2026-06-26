@@ -16,7 +16,7 @@ export function OpeningHours() {
 
 
     return (
-        <section className="section bg-charcoal relative overflow-hidden">
+        <section id="oeffnungszeiten" className="section bg-charcoal relative overflow-hidden">
             {/* Background photo – atelier3.jpeg */}
             <div
                 className="absolute inset-0 bg-cover bg-center"

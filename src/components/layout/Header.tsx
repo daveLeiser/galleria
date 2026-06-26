@@ -11,6 +11,7 @@ const navLinks = [
     { href: "/ausstellungen", label: "Ausstellungen" },
     { href: "/erfolgsstories", label: "Erfolgsstories" },
     { href: "/ueber-uns", label: "Über Uns" },
+    { href: "/#oeffnungszeiten", label: "Öffnungszeiten" },
 ];
 
 export function Header() {
@@ -24,6 +25,17 @@ export function Header() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        const isHashLink = href.startsWith("/#") || href.startsWith("#");
+        if (isHashLink) {
+            const id = href.split("#")[1];
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    };
 
     return (
         <div className={`sticky top-0 z-50`}>
@@ -51,7 +63,7 @@ export function Header() {
                                 <span className="text-charcoal">Flury</span>
                             </span>
                             <span
-                                className="text-xs tracking-[0.3em] text-warm-gray uppercase mt-1"
+                                className="text-xs tracking-[0.3em] text-warm-gray uppercase mt-1 whitespace-nowrap"
                                 style={{ fontFamily: "var(--font-josefin)" }}
                             >
                                 Kunst • Bilder • Rahmen
@@ -60,7 +72,7 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
                         {navLinks.map((link, index) => (
                             <motion.div
                                 key={link.href}
@@ -70,7 +82,8 @@ export function Header() {
                             >
                                 <Link
                                     href={link.href}
-                                    className="text-nav gold-underline text-charcoal hover:text-gold transition-colors"
+                                    onClick={(e) => handleNavClick(e, link.href)}
+                                    className="text-nav gold-underline text-charcoal hover:text-gold transition-colors whitespace-nowrap"
                                 >
                                     {link.label}
                                 </Link>
@@ -81,7 +94,11 @@ export function Header() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.4, delay: 0.5 }}
                         >
-                            <Link href="#kontakt" className="btn btn-primary">
+                            <Link 
+                                href="#kontakt" 
+                                className="btn btn-primary"
+                                onClick={(e) => handleNavClick(e, "#kontakt")}
+                            >
                                 Kontakt
                             </Link>
                         </motion.div>
@@ -116,7 +133,10 @@ export function Header() {
                                     <Link
                                         href={link.href}
                                         className="text-nav text-lg text-charcoal hover:text-gold transition-colors block py-2"
-                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        onClick={(e) => {
+                                            setIsMobileMenuOpen(false);
+                                            handleNavClick(e, link.href);
+                                        }}
                                     >
                                         {link.label}
                                     </Link>
@@ -131,7 +151,10 @@ export function Header() {
                                 <Link
                                     href="#kontakt"
                                     className="btn btn-primary w-full"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={(e) => {
+                                        setIsMobileMenuOpen(false);
+                                        handleNavClick(e, "#kontakt");
+                                    }}
                                 >
                                     Kontakt
                                 </Link>

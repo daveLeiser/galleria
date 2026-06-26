@@ -30,7 +30,7 @@ const values = [
         icon: Target,
         title: "Das Richtige für Sie",
         description:
-            "Durch unsere langjährigen Beziehungen zum regionalen Kunsthandwerk und zum internationalen Gewerbe bieten wir Ihnen in Biel/Bienne das vielseitigste und reichhaltigste Angebot der Branche. Bei uns finden Sie garantiert das Richtige – oder wir fertigen es speziell für Sie an.",
+            "Durch unsere langjährigen Beziehungen zum regionalen Kunsthandwerk und zum internationalen Gewerbe bieten wir Ihnen in Merzligen (Region Biel/Seeland) das vielseitigste und reichhaltigste Angebot der Branche. Bei uns finden Sie garantiert das Richtige – oder wir fertigen es speziell für Sie an.",
     },
     {
         icon: Scale,
@@ -186,7 +186,7 @@ export default function UeberUns() {
                                         fontSize: "1.125rem",
                                     }}
                                 >
-                                    In unserem Atelier in Biel/Bienne verbinden wir traditionelle
+                                    In unserem neuen Atelier in Merzligen (nahe Biel/Lyss/Aarberg) verbinden wir traditionelle
                                     Handwerkstechniken mit modernem Design. Jeder Rahmen, der unsere
                                     Werkstatt verlässt, trägt die Handschrift unserer Leidenschaft.
                                 </p>
