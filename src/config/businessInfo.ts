@@ -35,7 +35,7 @@ export const businessInfo = {
         { day: "Mittwoch", hours: "Geschlossen", closed: true },
         { day: "Donnerstag", hours: "Geschlossen", closed: true },
         { day: "Freitag", hours: "Geschlossen", closed: true },
-        { day: "Samstag", hours: "Geschlossen", closed: true },
+        //{ day: "Samstag", hours: "Geschlossen", closed: true },
         { day: "Sonntag", hours: "Geschlossen", closed: true },
         // Reguläre Öffnungszeiten:
         //{ day: "Montag", hours: "Geschlossen", closed: true },
@@ -43,7 +43,7 @@ export const businessInfo = {
         //{ day: "Mittwoch", hours: "Geschlossen", closed: true },
         //{ day: "Donnerstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
         //{ day: "Freitag", hours: "14:00 - 18:00", closed: false },
-        //{ day: "Samstag", hours: "09:30 - 13:00", closed: false },
+        { day: "Samstag", hours: "09:30 - 13:00", closed: false },
         //{ day: "Sonntag", hours: "Geschlossen", closed: true },
     ] as OpeningHoursDay[],
     social: {
@@ -52,7 +52,7 @@ export const businessInfo = {
     },
     announcement: {
         active: true,
-        message: "Hinweis: Vom Montag, 23. November bis und mit Sonntag, 29. November 2026 bleibt die Galleria vorübergehend geschlossen.",
+        message: "Hinweis: Vom Montag, 23. November bis und mit Freitag, 27. November 2026 bleibt die Galleria vorübergehend geschlossen.",
         // message: "Wir begrüssen Sie gerne an unserer neuen Adresse an der St. Niklausstrasse 22 in 3274 Merzligen. Wir freuen uns auf Ihren Besuch.",
     },
     description: "Ihr Berater für Kunst, Bilder und Rahmen. Ein familiengeführtes Unternehmen mit Tradition und Leidenschaft für Qualität.",
