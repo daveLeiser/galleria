@@ -30,21 +30,21 @@ export const businessInfo = {
     },
     openingHours: [
         // Vorübergehend geschlossen 23.11. - 29.11.2026: alle Tage geschlossen. Ab 01.12.2026 wieder reguläre Öffnungszeiten (unten auskommentiert).
-        { day: "Montag", hours: "Geschlossen", closed: true },
-        { day: "Dienstag", hours: "Geschlossen", closed: true },
-        { day: "Mittwoch", hours: "Geschlossen", closed: true },
-        { day: "Donnerstag", hours: "Geschlossen", closed: true },
-        { day: "Freitag", hours: "Geschlossen", closed: true },
-        //{ day: "Samstag", hours: "Geschlossen", closed: true },
-        { day: "Sonntag", hours: "Geschlossen", closed: true },
-        // Reguläre Öffnungszeiten:
         //{ day: "Montag", hours: "Geschlossen", closed: true },
-        //{ day: "Dienstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
+        //{ day: "Dienstag", hours: "Geschlossen", closed: true },
         //{ day: "Mittwoch", hours: "Geschlossen", closed: true },
-        //{ day: "Donnerstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
-        //{ day: "Freitag", hours: "14:00 - 18:00", closed: false },
-        { day: "Samstag", hours: "09:30 - 13:00", closed: false },
+        //{ day: "Donnerstag", hours: "Geschlossen", closed: true },
+        //{ day: "Freitag", hours: "Geschlossen", closed: true },
+        //{ day: "Samstag", hours: "Geschlossen", closed: true },
         //{ day: "Sonntag", hours: "Geschlossen", closed: true },
+        // Reguläre Öffnungszeiten:
+        { day: "Montag", hours: "Geschlossen", closed: true },
+        { day: "Dienstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
+        { day: "Mittwoch", hours: "Geschlossen", closed: true },
+        { day: "Donnerstag", hours: "09:30 - 12:00 / 14:00 - 18:00", closed: false },
+        { day: "Freitag", hours: "14:00 - 18:00", closed: false },
+        { day: "Samstag", hours: "09:30 - 13:00", closed: false },
+        { day: "Sonntag", hours: "Geschlossen", closed: true },
     ] as OpeningHoursDay[],
     social: {
         facebook: "#",
@@ -52,8 +52,8 @@ export const businessInfo = {
     },
     announcement: {
         active: true,
-        message: "Hinweis: Vom Montag, 23. November bis und mit Freitag, 27. November 2026 bleibt die Galleria vorübergehend geschlossen.",
-        // message: "Wir begrüssen Sie gerne an unserer neuen Adresse an der St. Niklausstrasse 22 in 3274 Merzligen. Wir freuen uns auf Ihren Besuch.",
+        //message: "Hinweis: Vom Montag, 23. November bis und mit Freitag, 27. November 2026 bleibt die Galleria vorübergehend geschlossen.",
+        message: "Wir begrüssen Sie gerne an unserer neuen Adresse an der St. Niklausstrasse 22 in 3274 Merzligen. Wir freuen uns auf Ihren Besuch.",
     },
     description: "Ihr Berater für Kunst, Bilder und Rahmen. Ein familiengeführtes Unternehmen mit Tradition und Leidenschaft für Qualität.",
 };
