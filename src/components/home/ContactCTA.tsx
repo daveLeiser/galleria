@@ -1,117 +1,133 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Phone, ArrowRight } from "lucide-react";
+import { Phone, Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { businessInfo } from "@/config/businessInfo";
+import { MaskedReveal, GoldHairline } from "@/components/ui/EditorialMotion";
+
+const LUXURY_EASE = [0.16, 1, 0.3, 1] as const;
+
+const quickLinks = [
+    { href: "/dienstleistungen", label: "Dienstleistungen" },
+    { href: "/ausstellungen", label: "Ausstellungen" },
+    { href: "/erfolgsstories", label: "Erfolgsstories" },
+    { href: "/ueber-uns", label: "Über Uns" },
+];
 
 export function ContactCTA() {
     return (
-        <section id="kontakt" className="section bg-paper relative overflow-hidden">
-            {/* Decorative background */}
-            <div className="absolute inset-0 pattern-lines opacity-20" />
-
-            {/* Golden accent line */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <section
+            id="kontakt"
+            className="relative bg-paper py-24 md:py-32 overflow-hidden border-t border-gold/15"
+        >
+            {/* Subtle paper dot texture */}
+            <div className="absolute inset-0 pattern-dots opacity-20 pointer-events-none" />
 
             <div className="container relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    >
-                        <span
+                {/* Styled like a Fine Letterpress Swiss Gallery Invitation Card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.9, ease: LUXURY_EASE }}
+                    className="relative max-w-4xl mx-auto bg-cream border border-gold/30 p-3 sm:p-4 shadow-[0_24px_70px_rgba(44,44,44,0.07)]"
+                >
+                    {/* Fine Inner Double Hairline Frame */}
+                    <div className="relative border border-gold/20 px-6 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 text-center">
+                        {/* Delicate Gold Corner Accents */}
+                        <div className="absolute top-3 left-3 w-5 h-5 border-t border-l border-gold/60" />
+                        <div className="absolute top-3 right-3 w-5 h-5 border-t border-r border-gold/60" />
+                        <div className="absolute bottom-3 left-3 w-5 h-5 border-b border-l border-gold/60" />
+                        <div className="absolute bottom-3 right-3 w-5 h-5 border-b border-r border-gold/60" />
+
+                        <motion.span
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.7, ease: LUXURY_EASE }}
                             className="text-nav text-gold mb-4 block tracking-[0.3em]"
                             style={{ fontSize: "0.75rem" }}
                         >
-                            Haben Sie Fragen?
-                        </span>
-                        <h2
-                            className="text-charcoal mb-6"
-                            style={{ fontFamily: "var(--font-playfair)" }}
-                        >
-                            Wir sind für Sie da
-                        </h2>
-                        <div className="ornament mx-auto mb-8" />
-                        <p
-                            className="text-warm-gray mb-10 max-w-2xl mx-auto"
+                            Persönliche Beratung
+                        </motion.span>
+
+                        <MaskedReveal>
+                            <h2
+                                className="text-charcoal mb-5"
+                                style={{ fontFamily: "var(--font-playfair)" }}
+                            >
+                                Lassen Sie uns Ihr Werk gemeinsam rahmen
+                            </h2>
+                        </MaskedReveal>
+
+                        <GoldHairline origin="center" className="w-28 mx-auto mb-7" />
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 14 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.15, duration: 0.8, ease: LUXURY_EASE }}
+                            className="text-warm-gray mb-10 max-w-2xl mx-auto leading-relaxed"
                             style={{
                                 fontFamily: "var(--font-cormorant)",
-                                fontSize: "1.25rem",
-                                lineHeight: 1.8,
+                                fontSize: "clamp(1.125rem, 1.8vw, 1.3125rem)",
                             }}
                         >
-                            Ob Sie eine Beratung für die perfekte Rahmung wünschen, Fragen zu
-                            unseren Dienstleistungen haben oder einfach unser Atelier besuchen
-                            möchten – wir freuen uns auf Ihre Kontaktaufnahme.
-                        </p>
-                    </motion.div>
+                            Ob massgefertigter Kunstrahmen, fachgerechte Restauration oder ein
+                            unverbindliches Gespräch bei uns im Atelier – wir nehmen uns gerne
+                            Zeit für Ihr Anliegen.
+                        </motion.p>
 
-                    {/* Contact options */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.6 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-                    >
-                        <a
-                            href={businessInfo.contact.phoneHref}
-                            className="btn btn-primary group"
+                        {/* Primary Contact Actions */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.25, duration: 0.7, ease: LUXURY_EASE }}
+                            className="flex flex-col sm:flex-row gap-3.5 justify-center items-center mb-10"
                         >
-                            <Phone size={18} />
-                            Jetzt anrufen
-                        </a>
-                        <a
-                            href={businessInfo.contact.emailHref}
-                            className="btn btn-outline group"
-                        >
-                            <Send size={18} />
-                            E-Mail senden
-                        </a>
-                    </motion.div>
+                            <a
+                                href={businessInfo.contact.phoneHref}
+                                className="btn btn-primary group w-full sm:w-auto"
+                            >
+                                <Phone size={16} />
+                                {businessInfo.contact.phoneDisplay}
+                            </a>
+                            <a
+                                href={businessInfo.contact.emailHref}
+                                className="btn btn-outline group w-full sm:w-auto"
+                            >
+                                <Mail size={16} />
+                                E-Mail schreiben
+                            </a>
+                        </motion.div>
 
-                    {/* Quick links */}
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.6 }}
-                        className="flex flex-wrap justify-center gap-8"
-                    >
-                        <Link
-                            href="/dienstleistungen"
-                            className="text-warm-gray hover:text-gold transition-colors flex items-center gap-2 group"
-                            style={{ fontFamily: "var(--font-josefin)", fontSize: "0.875rem" }}
+                        {/* Quiet Secondary Navigation */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.35, duration: 0.7 }}
+                            className="pt-8 border-t border-gold/20 flex flex-wrap justify-center gap-x-7 gap-y-3"
                         >
-                            Dienstleistungen
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                        <Link
-                            href="/ausstellungen"
-                            className="text-warm-gray hover:text-gold transition-colors flex items-center gap-2 group"
-                            style={{ fontFamily: "var(--font-josefin)", fontSize: "0.875rem" }}
-                        >
-                            Aktuelle Ausstellungen
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                        <Link
-                            href="/ueber-uns"
-                            className="text-warm-gray hover:text-gold transition-colors flex items-center gap-2 group"
-                            style={{ fontFamily: "var(--font-josefin)", fontSize: "0.875rem" }}
-                        >
-                            Über Uns
-                            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    </motion.div>
-                </div>
-            </div>
-
-            {/* Bottom decorative element */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-16">
-                <div className="w-full h-full border-l border-r border-b border-gold/30" />
+                            {quickLinks.map((item) => (
+                                <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className="text-warm-gray hover:text-gold transition-colors inline-flex items-center gap-1.5 group text-xs uppercase tracking-[0.2em]"
+                                    style={{ fontFamily: "var(--font-josefin)" }}
+                                >
+                                    {item.label}
+                                    <ArrowRight
+                                        size={13}
+                                        className="text-gold/70 group-hover:translate-x-1 transition-transform"
+                                    />
+                                </Link>
+                            ))}
+                        </motion.div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );
